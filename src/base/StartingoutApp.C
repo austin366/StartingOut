@@ -13,10 +13,9 @@ InputParameters validParams<StartingoutApp>()
   return params;
 }
 
-StartingoutApp::StartingoutApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+StartingoutApp::StartingoutApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);

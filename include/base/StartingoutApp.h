@@ -11,7 +11,7 @@ InputParameters validParams<StartingoutApp>();
 class StartingoutApp : public MooseApp
 {
 public:
-  StartingoutApp(const std::string & name, InputParameters parameters);
+  StartingoutApp(InputParameters parameters);
   virtual ~StartingoutApp();
 
   static void registerApps();
